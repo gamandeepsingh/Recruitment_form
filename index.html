@@ -5,29 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-            }
-          }
-        }
-      }
-    </script>
 </head>
 <body>
-    <div class="formbold-main-wrapper relative">
-        <div class="formbold-form-wrapper bg_move_form rounded-3xl relative overflow-hidden ">
+    <div class="formbold-main-wrapper">
 
-            <!-- <div class="absolute -top-5 -left-10 h-[100px] w-[100px] bg-[#a13dff] rounded-full blur-2xl opacity-50 "></div>
-            <div class="absolute top-40 -right-10 h-[100px] w-[100px] bg-[#1efff7c5] rounded-full  blur-2xl opacity-50"></div>
-            <div class="absolute top-96 -left-10 h-[100px] w-[100px] bg-[#ff95b8] rounded-full  blur-2xl opacity-50"></div> -->
-          <img  src="logo.png" height="200px" width="200px"
-          class="mx-auto mymovelogo rounded-full shadow-lg shadow-[#E0C3FC]">
-          <form class="space-y-3">
+        <div class="formbold-form-wrapper">
+            <form class="space-y-3">
+              <div class="w-full mx-auto">
+                <img  src="innologobright.png" class="mx-auto logo" >
+              </div>
 
             <!-- name  -->
             <div class="formbold-input-group">
@@ -142,9 +128,9 @@
                     Preference of Domain:
                 </label>
                 <label class="text-slate-500 text-sm">
-                    1st choice
+                    1st choice<span>*</span>
                 </label>
-                <select class="formbold-form-select" name="occupation" id="occupation">
+                <select class="formbold-form-select" name="occupation" id="occupation" required>
                     <option value="">Web Developer</option>
                     <option value="">Android Developer</option>
                     <option value="">AR/VR</option>
@@ -152,9 +138,9 @@
                     <option value="">Machine Learning</option>
                   </select>
                 <label class="text-slate-500 text-sm">
-                    2nd choice
+                    2nd choice<span>*</span>
                 </label>
-                <select class="formbold-form-select" name="occupation" id="occupation">
+                <select class="formbold-form-select" name="occupation" id="occupation" required>
                     <option value="">Web Developer</option>
                     <option value="">Android Developer</option>
                     <option value="">AR/VR</option>
@@ -181,12 +167,13 @@
         
                 <div class="formbold-radio-flex">
                   <div class="formbold-radio-group">
-                    <label class="formbold-radio-label">
+                    <label class="formbold-radio-label" >
                       <input
                         class="formbold-input-radio"
                         type="radio"
                         name="payment"
                         id="payment"
+                        required
                       />
                       Online(UPI)
                       <span class="formbold-radio-checkmark"></span>
@@ -209,12 +196,24 @@
                 </div>
             </div>
 
+            <!-- Prior Knoledge -->
+            <div class="formbold-textarea">
+              <label for="message" class="formbold-form-label">Short Bio</label>
+              <textarea
+                  rows="6"
+                  name="message"
+                  id="message"
+                  placeholder="Write your message..."
+                  class="formbold-form-input"
+              ></textarea>
+          </div>
+
             <!-- submit button -->
-            <button class="formbold-btn mymovebutton" type="submit">Submit</button>
+            <button class="formbold-btn" type="submit">Submit</button>
 
           </form>
         </div>
       </div>
-      
+
 </body>
 </html>
